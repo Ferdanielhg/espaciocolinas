@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Espacio Colinas | Barbería en Ciudad Juárez, Chihuahua México</title>
+  <meta name="description"
+    content="Espacio Colinas: Barbería en Ciudad Juárez, Chihuahua México. Cortes fade, corte de barba, corte clásico y afeitado tradicional. Agenda directo por WhatsApp.">
+  <meta name="keywords"
+    content="barbería ciudad juárez, barbería chihuahua méxico, corte fade juárez, corte de barba juárez, espacio colinas, mejor barbería ciudad juárez, cortes de hombre juarez">
+  <meta name="author" content="Espacio Colinas">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#152724">
+
+  <!-- Geo Tags para SEO Local (Ciudad Juárez, Chihuahua, México) -->
+  <meta name="geo.region" content="MX-CHH">
+  <meta name="geo.placename" content="Ciudad Juárez, Chihuahua">
+  <meta name="geo.position" content="31.6904;-106.4245">
+  <meta name="ICBM" content="31.6904, -106.4245">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Espacio Colinas">
+  <meta property="og:title" content="Espacio Colinas | Barbería en Ciudad Juárez, Chihuahua México">
+  <meta property="og:description" content="Barbería en Ciudad Juárez, Chihuahua México. Cortes fade, corte de barba y estilo sin rodeos. Agenda directo por WhatsApp.">
+  <meta property="og:image" content="assets/herobarber.jpeg">
+
+  <!-- Google Analytics 4 (GA4) Tag - Reemplaza G-XXXXXXXXXX con tu ID de medición -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      'send_page_view': true
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD para Google (SEO Local BarberShop) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Espacio Colinas",
+    "image": "assets/herobarber.jpeg",
+    "telephone": "+526561137420",
+    "priceRange": "$$",
+    "currenciesAccepted": "MXN",
+    "paymentAccepted": "Efectivo, Transferencia",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad Juárez",
+      "addressRegion": "Chihuahua",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.6904,
+      "longitude": -106.4245
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "11:00",
+        "closes": "17:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Menú de Barbería",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corte Fade"
+          },
+          "price": "220",
+          "priceCurrency": "MXN"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corte de Barba"
+          },
+          "price": "170",
+          "priceCurrency": "MXN"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corte Regular Adulto"
+          },
+          "price": "150",
+          "priceCurrency": "MXN"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corte Regular Niño"
+          },
+          "price": "90",
+          "priceCurrency": "MXN"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Delineado Ceja"
+          },
+          "price": "70",
+          "priceCurrency": "MXN"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/emblem_sun_transparent.png">
+
+  <!-- Fonts: Sorts Mill Goudy + Yanone Kaffeesatz + Outfit (Exact Canva Brand Match) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sorts+Mill+Goudy:ital@0;1&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-link" aria-label="Espacio Colinas">
+        <img src="assets/logo_banner_barberia_transparent.png" alt="Espacio Colinas Barbería" class="brand-logo-img">
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#horarios" class="nav-item-link">Horarios</a></li>
+          <li><a href="#servicios" class="nav-item-link">Servicios</a></li>
+          <li><a href="#concepto" class="nav-item-link">El Espacio</a></li>
+          <li><a href="#contacto" class="nav-item-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="desktop-only">
+        <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20una%20cita."
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="nav-cta-btn">
+          Agendar Cita
+        </a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO (CLEAN, BOLD & MINIMALIST)
+       ======================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-bg-wrapper">
+      <img src="assets/herobarber.jpeg" alt="Espacio Colinas Barbería en Ciudad Juárez" class="hero-bg-img">
+    </div>
+
+    <!-- Half-Arch Logo Representation (Cropped at edge for authentic brand identity) -->
+    <div class="hero-emblem-crop" aria-hidden="true">
+      <img src="assets/emblem_sun_light.png" alt="" class="hero-emblem-img">
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-brand-lockup">
+          <img src="assets/emblem_sun_light.png" alt="Espacio Colinas" class="hero-brand-emblem-left">
+          <div class="hero-brand-text">
+            <h1 class="hero-headline">ESPACIO COLINAS</h1>
+            <p class="hero-subhead">Barbería en Ciudad Juárez, Chihuahua México</p>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20cita%20para%20un%20corte."
+            target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" id="hero-wa-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.203.043.072.043.419-.101.824z" />
+            </svg>
+            Agendar por WhatsApp
+          </a>
+          <a href="#servicios" class="btn btn-outline-white btn-lg" id="hero-menu-link">
+            Ver Precios
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxury Minimalist Scroll Indicator -->
+    <a href="#horarios" class="hero-scroll-cue" aria-label="Desplazar hacia horarios">
+      <span class="scroll-cue-text">EXPLORAR</span>
+      <span class="scroll-cue-line"></span>
+    </a>
+  </section>
+
+  <!-- ========================================================================
+       HORARIOS & CITAS (AT THE TOP - IMMEDIATE CLIENT RELEVANCE)
+       ======================================================================== -->
+  <section class="section-schedule" id="horarios">
+    <!-- Subtly cropped sun emblem for identity -->
+    <div class="schedule-bg-emblem" aria-hidden="true">
+      <img src="assets/emblem_sun_transparent.png" alt="" class="schedule-emblem-img">
+    </div>
+    <div class="container">
+      <div class="schedule-strip">
+
+        <div class="schedule-block">
+          <span class="schedule-tag">Atención</span>
+          <h2 class="schedule-title">Horarios & Citas</h2>
+          <p class="schedule-desc">Con cita previa o conforme vas llegando.</p>
+        </div>
+
+        <div class="schedule-hours-group">
+          <div class="schedule-hour-card">
+            <span class="schedule-day-label">Lunes a Sábado</span>
+            <span class="schedule-time-val">10:00 AM – 7:00 PM</span>
+          </div>
+          <div class="schedule-hour-divider"></div>
+          <div class="schedule-hour-card">
+            <span class="schedule-day-label">Domingo</span>
+            <span class="schedule-time-val">11:00 AM – 5:00 PM</span>
+          </div>
+        </div>
+
+        <div class="schedule-action">
+          <div class="schedule-location-tag">Ciudad Juárez, Chih.</div>
+          <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20una%20cita."
+            target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="top-schedule-wa-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.203.043.072.043.419-.101.824z" />
+            </svg>
+            Agendar al 656 113 7420
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SERVICES & MENU (ARCHITECTURAL & MINIMALIST)
+       ======================================================================== -->
+  <section class="section services-section" id="servicios">
+    <div class="container">
+      <div class="services-layout">
+
+        <!-- Sticky Column with Live WhatsApp Trigger -->
+        <div class="services-info-sticky">
+          <span class="label-tag">Menú</span>
+          <h2 class="section-title">Servicios & Precios</h2>
+
+          <div class="services-booking-box">
+            <!-- Cropped brand emblem watermark on appointment pass -->
+            <img src="assets/emblem_sun_transparent.png" alt="" class="booking-box-watermark" aria-hidden="true">
+            <div class="booking-box-badge">ESPACIO COLINAS</div>
+            <div class="booking-box-label">Servicio Seleccionado</div>
+            <div class="booking-box-service-name" id="selected-service-name">Corte Fade</div>
+            <div class="booking-box-price" id="selected-service-price">$220</div>
+            <div class="ticket-tear-line" aria-hidden="true"></div>
+
+            <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20deseo%20agendar%20cita%20para:%20Corte%20Fade%20($220)."
+              target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;"
+              id="services-booking-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.203.043.072.043.419-.101.824z" />
+              </svg>
+              Agendar por WhatsApp
+            </a>
+
+            <div class="booking-box-note">
+              Atención con cita previa o conforme llegues si hay lugar disponible.
+            </div>
+          </div>
+        </div>
+
+        <!-- Clean Architectural Services List (Titles & Prices Only) -->
+        <div class="service-items-stack" role="radiogroup" aria-label="Lista de servicios">
+
+          <!-- Item 1: Corte Fade -->
+          <div class="service-card selected" data-name="Corte Fade" data-price="$220" tabindex="0">
+            <span class="service-index">01</span>
+            <span class="service-title">Corte Fade</span>
+            <span class="service-leader" aria-hidden="true"></span>
+            <div class="service-card-right">
+              <span class="service-cost">$220</span>
+              <div class="service-select-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Item 2: Corte de Barba -->
+          <div class="service-card" data-name="Corte de Barba" data-price="$170" tabindex="0">
+            <span class="service-index">02</span>
+            <span class="service-title">Corte de Barba</span>
+            <span class="service-leader" aria-hidden="true"></span>
+            <div class="service-card-right">
+              <span class="service-cost">$170</span>
+              <div class="service-select-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Item 3: Corte Regular Adulto -->
+          <div class="service-card" data-name="Corte Regular Adulto" data-price="$150" tabindex="0">
+            <span class="service-index">03</span>
+            <span class="service-title">Corte Regular Adulto</span>
+            <span class="service-leader" aria-hidden="true"></span>
+            <div class="service-card-right">
+              <span class="service-cost">$150</span>
+              <div class="service-select-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Item 4: Corte Regular Niño -->
+          <div class="service-card" data-name="Corte Regular Niño" data-price="$90" tabindex="0">
+            <span class="service-index">04</span>
+            <span class="service-title">Corte Regular Niño</span>
+            <span class="service-leader" aria-hidden="true"></span>
+            <div class="service-card-right">
+              <span class="service-cost">$90</span>
+              <div class="service-select-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Item 5: Delineado Ceja -->
+          <div class="service-card" data-name="Delineado Ceja" data-price="$70" tabindex="0">
+            <span class="service-index">05</span>
+            <span class="service-title">Delineado Ceja</span>
+            <span class="service-leader" aria-hidden="true"></span>
+            <div class="service-card-right">
+              <span class="service-cost">$70</span>
+              <div class="service-select-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Architectural Brand Crest Divider -->
+  <div class="brand-crest-divider" aria-hidden="true">
+    <span class="crest-line"></span>
+    <img src="assets/emblem_sun_transparent.png" alt="Espacio Colinas" class="crest-emblem">
+    <span class="crest-line"></span>
+  </div>
+
+  <!-- ========================================================================
+       CONCEPT: EL ESPACIO (3 ETAPAS - INCÓGNITA / MISTERIO)
+       ======================================================================== -->
+  <section class="section section-dark concept-section" id="concepto">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">El Proyecto</span>
+        <h2 class="section-title">Espacio Colinas en 3 Etapas</h2>
+        <p class="section-desc">
+          Arrancamos con barbería. Nuevas etapas próximamente.
+        </p>
+      </div>
+
+      <div class="concept-grid">
+
+        <!-- Stage 1 -->
+        <div class="concept-item concept-item-active">
+          <div class="concept-item-top">
+            <span class="concept-num">01</span>
+            <span class="concept-status-pill status-active">Disponible Hoy</span>
+          </div>
+          <h3 class="concept-title">Barbería</h3>
+          <p class="concept-desc">
+            Cortes clásicos, fade, barba y cuidado personal.
+          </p>
+        </div>
+
+        <!-- Stage 2 (Incógnita) -->
+        <div class="concept-item concept-item-mystery">
+          <div class="concept-item-top">
+            <span class="concept-num">02</span>
+            <span class="concept-status-pill status-next">Próximamente</span>
+          </div>
+          <h3 class="concept-title">Próximamente</h3>
+          <p class="concept-desc">
+            Próximamente.
+          </p>
+        </div>
+
+        <!-- Stage 3 (Sorpresa) -->
+        <div class="concept-item concept-item-mystery">
+          <div class="concept-item-top">
+            <span class="concept-num">03</span>
+            <span class="concept-status-pill status-future">Sorpresa</span>
+          </div>
+          <h3 class="concept-title">Próximamente</h3>
+          <p class="concept-desc">
+            Sorpresa. Próximamente.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EDITORIAL PHOTOGRAPHY GRID
+       ======================================================================== -->
+  <section class="gallery-section">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/barberiareal.jpeg" alt="Espacio Colinas Barbería en Ciudad Juárez" class="gallery-img"
+          loading="lazy">
+        <span class="gallery-label">El Espacio ✦ Interior</span>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/barberiareal2.jpeg" alt="Instalaciones Espacio Colinas Barbería" class="gallery-img"
+          loading="lazy">
+        <span class="gallery-label">Ambiente & Detalle</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT & LOCATION
+       ======================================================================== -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div>
+          <span class="label-tag">Contacto</span>
+          <h2 class="section-title">Ubicación & Citas</h2>
+          <p class="section-desc">
+            Atendemos con cita previa o conforme vas llegando si hay silla disponible.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-item-title">Horarios</div>
+              <div class="contact-item-value">
+                Lunes a Sábado: 10:00 AM – 7:00 PM<br>
+                Domingo: 11:00 AM – 5:00 PM
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-item-title">Contacto Directo</div>
+              <div class="contact-item-value">
+                WhatsApp: +52 656 113 7420
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Box -->
+        <div class="contact-card-box">
+          <span class="label-tag" style="color:var(--color-gold);">¿Listo para tu corte?</span>
+          <h3>Mándanos un WhatsApp</h3>
+          <p>Escríbenos directamente para apartar tu lugar o checar disponibilidad en el momento.</p>
+          <a href="tel:+526561137420" class="phone-big-link">656 113 7420</a>
+          <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20cita." target="_blank"
+            rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" style="width: 100%;">
+            Abrir WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <img src="assets/logo_banner_barberia_light.png" alt="Espacio Colinas" class="footer-logo">
+      <img src="assets/emblem_sun_light.png" alt="" class="footer-crest-emblem" aria-hidden="true">
+      <div>&copy; 2026 Espacio Colinas. Todos los derechos reservados.</div>
+      <div>WhatsApp: +52 656 113 7420</div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MOBILE STICKY BOTTOM BAR
+       ======================================================================== -->
+  <aside class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Reserva rápida móvil">
+    <div class="mobile-bar-details">
+      <span class="mobile-bar-service" id="mobile-bar-service">Corte Fade</span>
+      <span class="mobile-bar-price" id="mobile-bar-price">$220</span>
+    </div>
+    <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20deseo%20agendar%20cita%20para:%20Corte%20Fade%20($220)."
+      target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="mobile-bar-btn"
+      style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+      Agendar Cita
+    </a>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
