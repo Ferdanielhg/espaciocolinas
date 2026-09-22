@@ -138,13 +138,13 @@
   }
 
   .hero-brand-lockup {
-    gap: 0.85rem;
+    gap: 1rem;
     margin-bottom: var(--space-xl);
   }
 
   .hero-brand-emblem-left {
-    width: clamp(52px, 14vw, 68px);
-    height: clamp(52px, 14vw, 68px);
+    width: clamp(75px, 20vw, 105px);
+    height: clamp(75px, 20vw, 105px);
   }
 
   .hero-headline {
