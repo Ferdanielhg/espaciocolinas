@@ -83,6 +83,13 @@
     });
   });
 
+  // Track Google Maps clicks
+  document.querySelectorAll('a[href*="share.google"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      trackEvent('view_location', 'Engagement', 'Google Maps Link', 0);
+    });
+  });
+
   // Header Scroll
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {

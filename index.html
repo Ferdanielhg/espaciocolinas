@@ -48,6 +48,7 @@
     "name": "Espacio Colinas",
     "image": "assets/herobarber.jpeg",
     "telephone": "+526561137420",
+    "hasMap": "https://share.google/dy31i74f9MMFo2jnD",
     "priceRange": "$$",
     "currenciesAccepted": "MXN",
     "paymentAccepted": "Efectivo, Transferencia",
@@ -258,7 +259,9 @@
         </div>
 
         <div class="schedule-action">
-          <div class="schedule-location-tag">Ciudad Juárez, Chih.</div>
+          <a href="https://share.google/dy31i74f9MMFo2jnD" target="_blank" rel="noopener noreferrer" class="schedule-location-tag" title="Abrir ubicación en Google Maps">
+            📍 Ciudad Juárez, Chih. ↗
+          </a>
           <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20una%20cita."
             target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="top-schedule-wa-btn">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -462,15 +465,28 @@
       <div class="contact-grid">
 
         <div>
-          <span class="label-tag">Contacto</span>
-          <h2 class="section-title">Ubicación & Citas</h2>
+          <span class="label-tag">Contacto & Ubicación</span>
+          <h2 class="section-title">Encuéntranos en Ciudad Juárez</h2>
           <p class="section-desc">
             Atendemos con cita previa o conforme vas llegando si hay silla disponible.
           </p>
 
           <div class="contact-info-list">
             <div class="contact-info-item">
-              <div class="contact-item-title">Horarios</div>
+              <div class="contact-item-title">Ubicación</div>
+              <div class="contact-item-value">
+                Ciudad Juárez, Chihuahua México<br>
+                <a href="https://share.google/dy31i74f9MMFo2jnD" target="_blank" rel="noopener noreferrer" class="contact-maps-link">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  Abrir en Google Maps ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-item-title">Horarios de Atención</div>
               <div class="contact-item-value">
                 Lunes a Sábado: 10:00 AM – 7:00 PM<br>
                 Domingo: 11:00 AM – 5:00 PM
@@ -492,10 +508,23 @@
           <h3>Mándanos un WhatsApp</h3>
           <p>Escríbenos directamente para apartar tu lugar o checar disponibilidad en el momento.</p>
           <a href="tel:+526561137420" class="phone-big-link">656 113 7420</a>
-          <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20cita." target="_blank"
-            rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" style="width: 100%;">
-            Abrir WhatsApp
-          </a>
+          <div class="contact-card-buttons">
+            <a href="https://wa.me/526561137420?text=Hola%20Espacio%20Colinas,%20quiero%20agendar%20cita." target="_blank"
+              rel="noopener noreferrer" class="btn btn-whatsapp btn-lg w-100" id="contact-wa-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.203.043.072.043.419-.101.824z" />
+              </svg>
+              Abrir WhatsApp
+            </a>
+            <a href="https://share.google/dy31i74f9MMFo2jnD" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-white btn-lg w-100" id="contact-maps-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              Cómo Llegar (Google Maps) ↗
+            </a>
+          </div>
         </div>
 
       </div>
@@ -510,7 +539,12 @@
       <img src="assets/logo_banner_barberia_light.png" alt="Espacio Colinas" class="footer-logo">
       <img src="assets/emblem_sun_light.png" alt="" class="footer-crest-emblem" aria-hidden="true">
       <div>&copy; 2026 Espacio Colinas. Todos los derechos reservados.</div>
-      <div>WhatsApp: +52 656 113 7420</div>
+      <div style="display:flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+        <a href="https://share.google/dy31i74f9MMFo2jnD" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold);">
+          📍 Ver en Google Maps ↗
+        </a>
+        <span>WhatsApp: +52 656 113 7420</span>
+      </div>
     </div>
   </footer>
 

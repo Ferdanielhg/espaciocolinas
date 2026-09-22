@@ -450,7 +450,16 @@
   font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-bronze);
+  text-decoration: none;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+}
+
+.schedule-location-tag:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------------
@@ -993,6 +1002,39 @@
 
 .phone-big-link:hover {
   color: #FFFFFF;
+}
+
+.contact-card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-family: var(--font-brand);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  transition: color var(--transition);
+}
+
+.contact-maps-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.icon-inline {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------
