@@ -294,16 +294,6 @@
   flex-shrink: 0;
 }
 
-.hero-location-arrow {
-  color: var(--color-gold);
-  font-size: 0.85rem;
-  transition: transform var(--transition);
-}
-
-.hero-location-badge:hover .hero-location-arrow {
-  transform: translate(2px, -2px);
-}
-
 /* Cropped Giant Half-Sun Arch in Hero (Partida a la mitad) */
 .hero-emblem-crop {
   position: absolute;
