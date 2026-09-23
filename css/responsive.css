@@ -1,8 +1,10 @@
 /* ==========================================================================
-   ESPACIO COLINAS - RESPONSIVE STYLES
+   ESPACIO COLINAS - RESPONSIVE STYLES (EDITORIAL AWWWARDS)
    ========================================================================== */
 
-/* Hamburger Button */
+/* --------------------------------------------------------------------------
+   HAMBURGER BUTTON
+   -------------------------------------------------------------------------- */
 .mobile-nav-toggle {
   display: none;
   flex-direction: column;
@@ -38,17 +40,18 @@
    TABLET (max-width: 992px)
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
-  .schedule-strip {
+  .schedule-grid-ribbon {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
   }
 
-  .schedule-hours-group {
-    justify-content: space-between;
+  .schedule-col {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-lg);
   }
 
-  .schedule-action {
-    align-items: flex-start;
+  .schedule-col:last-child {
+    border-bottom: none;
   }
 
   .services-layout {
@@ -56,24 +59,44 @@
     gap: var(--space-2xl);
   }
 
-  .services-info-sticky {
+  .services-sticky-col {
     position: static;
   }
 
-  .services-booking-box {
-    display: none;
+  .concierge-card {
+    display: none; /* In tablet & mobile, the active selection is handled by the floating dock or clean rows */
   }
 
   .concept-grid {
     grid-template-columns: 1fr;
-    gap: 1px;
+  }
+
+  .concept-card {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-dark);
+    padding: var(--space-xl);
+  }
+
+  .concept-card:last-child {
+    border-bottom: none;
   }
 
   .gallery-grid {
-    height: 380px;
+    grid-template-columns: 1fr;
+    height: auto;
   }
 
-  .contact-grid {
+  .gallery-item {
+    height: 340px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-dark);
+  }
+
+  .gallery-item:last-child {
+    border-bottom: none;
+  }
+
+  .contact-layout {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
@@ -124,8 +147,7 @@
 
   .nav-item-link {
     font-size: 1.65rem;
-    font-family: var(--font-brand);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
   }
 
   .desktop-only {
@@ -133,122 +155,87 @@
   }
 
   .hero-section {
-    min-height: 80vh;
+    min-height: 82vh;
     padding-top: calc(var(--header-height) + var(--space-lg));
+  }
+
+  .hero-kicker {
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
   }
 
   .hero-brand-lockup {
     gap: 1rem;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
   }
 
   .hero-brand-emblem-left {
-    width: clamp(75px, 20vw, 105px);
-    height: clamp(75px, 20vw, 105px);
+    width: clamp(72px, 19vw, 98px);
+    height: clamp(72px, 19vw, 98px);
   }
 
   .hero-headline {
-    font-size: clamp(1.45rem, 6.2vw, 2.3rem);
+    font-size: clamp(1.65rem, 6.4vw, 2.5rem);
     white-space: nowrap;
-    line-height: 1;
+    line-height: 1.05;
   }
 
   .hero-subhead {
     font-size: clamp(0.95rem, 3.8vw, 1.25rem);
-    line-height: 1.2;
+    line-height: 1.25;
+    margin-bottom: 6px;
   }
 
-  .hero-location-badge {
-    font-size: 0.88rem;
-    padding: 0.28rem 0.75rem;
-    gap: 6px;
-    margin-top: 6px;
+  .hero-location-link {
+    font-size: 0.92rem;
   }
 
-  .hero-emblem-crop {
-    width: 300px;
-    height: 300px;
-    bottom: -60px;
-    right: -60px;
-    opacity: 0.12;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
-  .gallery-item {
-    height: 260px;
-  }
-
-  .schedule-hours-group {
+  .hero-actions {
     flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-md);
-    padding: 1.1rem 1.25rem;
+    align-items: stretch;
+    gap: var(--space-sm);
   }
 
-  .schedule-hour-divider {
-    width: 100%;
-    height: 1px;
-  }
-
-  .schedule-action {
-    width: 100%;
-    align-items: flex-start;
-  }
-
-  .schedule-action .btn {
+  .hero-actions .btn {
     width: 100%;
   }
 
-  .service-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.85rem;
-    padding: 1.15rem 1.2rem;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .service-index {
-    font-size: 1.25rem;
-    width: 22px;
-    flex-shrink: 0;
-    line-height: 1;
-  }
-
-  .service-title {
-    font-size: 1.15rem;
-    white-space: nowrap;
-    margin: 0;
-  }
-
-  .service-leader {
-    margin: 0 0.5rem;
-    min-width: 12px;
-  }
-
-  .service-card-right {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    flex-shrink: 0;
-  }
-
-  .service-cost {
-    font-size: 1.55rem;
-  }
-
-  .service-select-indicator {
-    width: 18px;
-    height: 18px;
+  .hero-secondary-link {
+    justify-content: center;
+    border-bottom: none;
+    font-size: 1.05rem;
   }
 
   .hero-scroll-cue {
     display: none;
+  }
+
+  .service-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .service-title {
+    font-size: 1.22rem;
+  }
+
+  .service-cost {
+    font-size: 1.65rem;
+  }
+
+  .service-index {
+    font-size: 1.15rem;
+    width: 22px;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .gallery-caption {
+    font-size: 0.76rem;
+    bottom: var(--space-sm);
+    left: var(--space-sm);
+    padding: 0.35rem 0.75rem;
   }
 
   .mobile-sticky-bar {

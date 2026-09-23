@@ -1,9 +1,9 @@
 /* ==========================================================================
-   ESPACIO COLINAS - MODERN MINIMALIST COMPONENTS (CRISP STYLE)
+   ESPACIO COLINAS - EDITORIAL MINIMALIST COMPONENTS (AWWWARDS CALIBER)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. HEADER & NAVBAR
+   1. HEADER & NAVIGATION
    -------------------------------------------------------------------------- */
 .site-header {
   position: fixed;
@@ -11,17 +11,18 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(251, 249, 245, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
-  transition: background-color var(--transition), border-color var(--transition);
+  transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .site-header.scrolled {
-  background-color: rgba(251, 249, 245, 0.98);
-  border-bottom-color: rgba(21, 39, 36, 0.15);
+  background-color: rgba(250, 248, 245, 0.98);
+  border-bottom-color: rgba(16, 30, 28, 0.14);
+  box-shadow: 0 4px 20px rgba(16, 30, 28, 0.03);
 }
 
 .nav-container {
@@ -35,10 +36,15 @@
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+  transition: opacity var(--transition);
+}
+
+.brand-link:hover {
+  opacity: 0.85;
 }
 
 .brand-logo-img {
-  height: 34px;
+  height: 32px;
   width: auto;
   object-fit: contain;
 }
@@ -46,44 +52,104 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-xl);
+  gap: clamp(1.5rem, 2.8vw, 2.5rem);
   list-style: none;
 }
 
 .nav-item-link {
   font-family: var(--font-brand);
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.12rem;
+  font-weight: var(--fw-semibold);
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  position: relative;
+  padding: 4px 0;
   transition: color var(--transition);
+}
+
+.nav-item-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-bronze);
+  transition: width var(--transition);
 }
 
 .nav-item-link:hover {
   color: var(--color-bronze);
 }
 
+.nav-item-link:hover::after {
+  width: 100%;
+}
+
+/* Nav Action - Understated Editorial Button */
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1.35rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-brand);
+  font-size: 1.05rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+
+.nav-cta-btn:hover {
+  background-color: var(--color-bronze);
+  border-color: var(--color-bronze);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
 /* --------------------------------------------------------------------------
-   2. BUTTONS (SHARP & MODERN)
+   2. BUTTONS & EDITORIAL ACTIONS
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xs);
-  padding: 0.8rem 1.6rem;
-  border-radius: var(--radius-sm);
+  gap: 8px;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-xs);
   font-family: var(--font-brand);
   font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   transition: all var(--transition);
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 
+.btn-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.btn-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+
+.btn:hover .btn-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Primary Dark Button */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
@@ -93,24 +159,73 @@
 .btn-primary:hover {
   background-color: var(--color-bronze);
   border-color: var(--color-bronze);
-  color: var(--color-text-inverse);
+  color: #FFFFFF;
   transform: translateY(-1px);
 }
 
-.btn-outline {
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  background-color: transparent;
+/* Editorial Hero Luxury Button (Deep obsidian slate with bronze glow) */
+.btn-hero-luxury {
+  background: linear-gradient(135deg, rgba(20, 36, 33, 0.98) 0%, rgba(13, 24, 22, 1) 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(200, 169, 126, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 1rem 2.2rem;
+  font-size: 1.18rem;
+  border-radius: var(--radius-xs);
 }
 
-.btn-outline:hover {
+.btn-hero-luxury:hover {
+  border-color: var(--color-gold);
+  background: var(--color-primary);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), 0 0 20px rgba(200, 169, 126, 0.2);
+}
+
+/* Secondary Editorial Hero Link */
+.hero-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-brand);
+  font-size: 1.15rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(250, 248, 245, 0.85);
+  padding: 0.85rem 1.4rem;
+  border-bottom: 1px solid rgba(250, 248, 245, 0.3);
+  transition: all var(--transition);
+}
+
+.hero-secondary-link:hover {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+  transform: translateY(-1px);
+}
+
+/* Editorial Atelier Button for Reservation Panel */
+.btn-atelier {
+  width: 100%;
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
+  border: 1px solid var(--color-primary);
+  padding: 1.05rem 1.5rem;
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.1em;
 }
 
-.btn-outline-white {
-  border: 1px solid rgba(255, 255, 255, 0.4);
+.btn-atelier:hover {
+  background-color: var(--color-bronze);
+  border-color: var(--color-bronze);
   color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Outline White Button */
+.btn-outline-white {
+  border: 1px solid rgba(250, 248, 245, 0.35);
+  color: var(--color-text-inverse);
   background-color: transparent;
 }
 
@@ -120,38 +235,12 @@
   border-color: #FFFFFF;
 }
 
-.btn-whatsapp {
-  background-color: #25D366;
-  color: #FFFFFF;
-  border: 1px solid #25D366;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
-}
-
-.btn-whatsapp:hover {
-  background-color: #20BA5A;
-  border-color: #20BA5A;
-  color: #FFFFFF;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-}
-
-.btn-lg {
-  padding: 1rem 2.2rem;
-  font-size: 0.95rem;
-}
-
-.btn-icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  flex-shrink: 0;
-}
-
 /* --------------------------------------------------------------------------
-   3. HERO SECTION (HIGH IMPACT, CRISP & CLEAN)
+   3. HERO SECTION (CINEMATIC & MONUMENTAL)
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 88vh;
+  min-height: 94vh;
   display: flex;
   align-items: center;
   padding-top: calc(var(--header-height) + var(--space-xl));
@@ -172,7 +261,7 @@
   overflow: hidden;
 }
 
-/* Layered Luxury Editorial Gradient Overlay (High Visibility for Barbershop Interior) */
+/* High-Fashion Cinematic Vignette */
 .hero-bg-wrapper::after {
   content: '';
   position: absolute;
@@ -181,8 +270,8 @@
   width: 100%;
   height: 100%;
   background:
-    linear-gradient(90deg, rgba(15, 27, 25, 0.72) 0%, rgba(15, 27, 25, 0.38) 48%, rgba(15, 27, 25, 0.1) 100%),
-    linear-gradient(180deg, rgba(15, 27, 25, 0.45) 0%, transparent 22%, transparent 72%, rgba(15, 27, 25, 0.6) 100%);
+    linear-gradient(90deg, rgba(13, 24, 22, 0.85) 0%, rgba(13, 24, 22, 0.52) 50%, rgba(13, 24, 22, 0.28) 100%),
+    linear-gradient(180deg, rgba(13, 24, 22, 0.5) 0%, transparent 25%, transparent 68%, rgba(13, 24, 22, 0.85) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -192,118 +281,129 @@
   height: 100%;
   object-fit: cover;
   object-position: center 38%;
-  filter: brightness(0.94) contrast(1.05) saturate(1.08);
-  animation: heroSlowZoom 28s ease-in-out infinite alternate;
-  transform-origin: center 40%;
+  filter: brightness(0.92) contrast(1.06);
+  animation: heroSlowPan 32s ease-in-out infinite alternate;
+  transform-origin: center center;
 }
 
-@keyframes heroSlowZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.06);
-  }
+@keyframes heroSlowPan {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1050px;
+  max-width: 980px;
+}
+
+/* Hero Top Kicker Metadata */
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-brand);
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-md);
+  opacity: 0.95;
+}
+
+.hero-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-gold);
 }
 
 .hero-brand-lockup {
   display: flex;
   align-items: center;
-  gap: clamp(1.2rem, 2.8vw, 2.4rem);
-  margin-bottom: var(--space-2xl);
+  gap: clamp(1.2rem, 2.5vw, 2.4rem);
+  margin-bottom: var(--space-xl);
 }
 
 .hero-brand-emblem-left {
-  width: clamp(110px, 11vw, 160px);
-  height: clamp(110px, 11vw, 160px);
+  width: clamp(96px, 9vw, 140px);
+  height: clamp(96px, 9vw, 140px);
   object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.65));
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.6));
 }
 
 .hero-brand-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .hero-headline {
   font-family: var(--font-display);
   color: #FFFFFF;
   margin-bottom: 6px;
-  font-size: clamp(2.2rem, 5.4vw, 4.5rem);
+  font-size: clamp(2.3rem, 5.8vw, 4.8rem);
   line-height: 1;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  white-space: nowrap; /* Impide salto de linea entre Espacio y Colinas */
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65), 0 6px 30px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
 }
 
 .hero-subhead {
   font-family: var(--font-brand);
-  font-size: clamp(1.2rem, 2.1vw, 1.65rem);
-  color: #FFFFFF;
-  font-weight: 500;
+  font-size: clamp(1.15rem, 2.1vw, 1.6rem);
+  color: rgba(250, 248, 245, 0.9);
+  font-weight: var(--fw-medium);
   line-height: 1.25;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Intuitive & Discrete Hero Address Badge */
-.hero-location-badge {
+/* Minimalist Location Coordinate Link (No tacky pills, pure editorial line) */
+.hero-location-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-  padding: 0.38rem 0.95rem;
-  background: rgba(21, 39, 36, 0.52);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(197, 157, 95, 0.45);
-  border-radius: 999px;
-  color: #FFFFFF;
+  gap: 7px;
   font-family: var(--font-brand);
-  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
-  letter-spacing: 0.05em;
-  text-decoration: none;
+  font-size: clamp(0.98rem, 1.4vw, 1.2rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border-bottom: 1px dotted rgba(200, 169, 126, 0.5);
+  padding-bottom: 2px;
   width: fit-content;
   transition: all var(--transition);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
 
-.hero-location-badge:hover {
-  background: rgba(21, 39, 36, 0.85);
-  border-color: var(--color-gold);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  color: var(--color-gold);
+.hero-location-link:hover {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  transform: translateX(3px);
 }
 
-.hero-location-pin {
-  width: 1rem;
-  height: 1rem;
-  color: var(--color-gold);
-  flex-shrink: 0;
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
 }
 
-/* Cropped Giant Half-Sun Arch in Hero (Partida a la mitad) */
+/* Architectural Half-Sun Watermark in Background */
 .hero-emblem-crop {
   position: absolute;
-  bottom: -110px;
+  bottom: -130px;
   right: -90px;
-  width: 480px;
-  height: 480px;
+  width: 520px;
+  height: 520px;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.07;
+  opacity: 0.06;
 }
 
 .hero-emblem-img {
@@ -312,14 +412,7 @@
   object-fit: contain;
 }
 
-.hero-buttons {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-}
-
-/* Luxury Editorial Scroll Cue */
+/* Luxury Scroll Indicator */
 .hero-scroll-cue {
   position: absolute;
   bottom: var(--space-lg);
@@ -330,7 +423,7 @@
   align-items: center;
   gap: 8px;
   z-index: 2;
-  opacity: 0.8;
+  opacity: 0.75;
   transition: opacity var(--transition);
 }
 
@@ -340,23 +433,23 @@
 
 .scroll-cue-text {
   font-family: var(--font-brand);
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
+  font-size: 0.76rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--color-gold);
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
 
 .scroll-cue-line {
   width: 1.5px;
-  height: 38px;
-  background: linear-gradient(180deg, var(--color-gold) 0%, rgba(197, 157, 95, 0.05) 100%);
+  height: 36px;
+  background: linear-gradient(180deg, var(--color-gold) 0%, rgba(200, 169, 126, 0.05) 100%);
   animation: scrollCuePulse 2.4s ease-in-out infinite;
 }
 
 @keyframes scrollCuePulse {
   0%, 100% {
-    transform: scaleY(0.6);
+    transform: scaleY(0.5);
     opacity: 0.4;
   }
   50% {
@@ -366,721 +459,569 @@
 }
 
 /* --------------------------------------------------------------------------
-   3.5 HORARIOS & CITAS (TOP STRIP / IMMEDIATE CLIENT ACCESS)
+   4. SCHEDULE & LOCATION (ARCHITECTURAL 3-COLUMN RIBBON)
    -------------------------------------------------------------------------- */
 .section-schedule {
   background-color: var(--color-bg-subtle);
   border-bottom: 1px solid var(--color-border);
-  padding: var(--space-xl) 0;
+  padding: var(--space-2xl) 0;
   position: relative;
-  overflow: hidden;
 }
 
-/* Subtly cropped sun emblem watermark in schedule section */
-.schedule-bg-emblem {
-  position: absolute;
-  left: -80px;
-  bottom: -70px;
-  width: 240px;
-  height: 240px;
-  opacity: 0.045;
-  pointer-events: none;
-}
-
-.schedule-emblem-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.schedule-strip {
+.schedule-grid-ribbon {
   display: grid;
-  grid-template-columns: 1.15fr 1.35fr auto;
-  gap: var(--space-2xl);
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.schedule-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.schedule-tag {
-  font-family: var(--font-brand);
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-bronze);
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.schedule-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-  color: var(--color-primary);
-  margin-bottom: 4px;
-  line-height: 1.1;
-}
-
-.schedule-desc {
-  font-family: var(--font-brand);
-  font-size: 1.25rem;
-  letter-spacing: 0.03em;
-  color: var(--color-text-secondary);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.schedule-hours-group {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xl);
-  background-color: #FFFFFF;
-  padding: 1rem 1.6rem;
-  border-radius: var(--radius-md);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 16px rgba(21, 39, 36, 0.04);
+  background-color: var(--color-bg-surface);
 }
 
-.schedule-hour-card {
+.schedule-col {
+  padding: var(--space-xl) var(--space-xl);
+  border-right: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  justify-content: space-between;
+  transition: background-color var(--transition);
 }
 
-.schedule-day-label {
-  font-size: 0.72rem;
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-bronze);
+.schedule-col:last-child {
+  border-right: none;
 }
 
-.schedule-time-val {
+.schedule-col:hover {
+  background-color: #FAF8F5;
+}
+
+.schedule-col-kicker {
   font-family: var(--font-brand);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+.schedule-col-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
   color: var(--color-primary);
-  letter-spacing: 0.02em;
-  line-height: 1.1;
-  white-space: nowrap;
+  margin-bottom: var(--space-xs);
 }
 
-.schedule-hour-divider {
-  width: 1px;
-  height: 38px;
-  background-color: var(--color-border);
-}
-
-.schedule-action {
+.schedule-col-hours {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 0.4rem;
+  gap: 4px;
 }
 
-.schedule-location-tag {
+.schedule-col-hours span {
   font-family: var(--font-brand);
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
+  font-size: 1.22rem;
+  color: var(--color-primary);
+  letter-spacing: 0.03em;
+}
+
+.schedule-col-hours small {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
   text-transform: uppercase;
-  color: var(--color-bronze);
-  text-decoration: none;
-  transition: all var(--transition);
+  letter-spacing: 0.08em;
+}
+
+.schedule-col-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-xs);
+}
+
+.link-editorial {
   display: inline-flex;
   align-items: center;
+  gap: 5px;
+  font-family: var(--font-brand);
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  transition: color var(--transition);
 }
 
-.schedule-location-tag:hover {
+.link-editorial:hover {
   color: var(--color-primary);
-  text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------------
-   4. SERVICES & MENU (ARCHITECTURAL & MINIMALIST)
+   5. MENÚ DE AUTOR (EDITORIAL ATELIER PRICE LIST)
    -------------------------------------------------------------------------- */
 .services-section {
   background-color: var(--color-bg-main);
+  padding: var(--space-3xl) 0;
 }
 
 .services-layout {
   display: grid;
   grid-template-columns: 1fr 1.35fr;
-  gap: var(--space-3xl);
+  gap: clamp(2rem, 5vw, 4.5rem);
   align-items: start;
 }
 
-.services-info-sticky {
+.services-sticky-col {
   position: sticky;
   top: calc(var(--header-height) + var(--space-xl));
 }
 
-.services-info-sticky h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  margin-bottom: var(--space-sm);
-}
-
-.services-info-sticky p {
-  margin-bottom: var(--space-xl);
-}
-
-/* Luxury Appointment Pass / Ticket Card */
-.services-booking-box {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F4 100%);
+/* Bespoke Atelier Reservation Card (Clean, understated luxury) */
+.concierge-card {
+  background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-bronze);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl) var(--space-lg);
-  box-shadow: 0 8px 30px rgba(21, 39, 36, 0.06);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xs);
+  margin-top: var(--space-xl);
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(16, 30, 28, 0.04);
 }
 
-/* Tactile Ticket Cut-Out Notches */
-.services-booking-box::before,
-.services-booking-box::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: var(--color-bg-main);
-  border: 1px solid var(--color-border);
-  z-index: 2;
-}
-
-.services-booking-box::before {
-  left: -10px;
-  transform: translateY(-50%);
-}
-
-.services-booking-box::after {
-  right: -10px;
-  transform: translateY(-50%);
-}
-
-.ticket-tear-line {
-  width: 100%;
-  height: 1px;
-  border-top: 1.5px dashed var(--color-border);
-  margin: var(--space-md) 0 var(--space-lg);
-  position: relative;
-}
-
-.booking-box-watermark {
-  position: absolute;
-  right: -30px;
-  bottom: -30px;
-  width: 140px;
-  height: 140px;
-  opacity: 0.06;
-  pointer-events: none;
-}
-
-.booking-box-badge {
+.concierge-kicker {
   font-family: var(--font-brand);
-  font-size: 0.95rem;
-  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--color-bronze);
-  margin-bottom: var(--space-sm);
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
 }
 
-.booking-box-label {
-  font-family: var(--font-brand);
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  margin-bottom: 2px;
-}
-
-.booking-box-service-name {
+.concierge-service-name {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.95rem;
   color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.concierge-price {
+  font-family: var(--font-brand);
+  font-size: 2.8rem;
   font-weight: var(--fw-bold);
-  margin-bottom: 2px;
-}
-
-.booking-box-price {
-  font-family: var(--font-brand);
-  font-size: 2.4rem;
-  font-weight: 700;
   color: var(--color-bronze);
-  margin-bottom: var(--space-lg);
+  line-height: 1;
   letter-spacing: 0.02em;
+  margin-bottom: var(--space-lg);
 }
 
-.booking-box-note {
-  font-family: var(--font-brand);
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
-  color: var(--color-text-muted);
+.concierge-note {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
   text-align: center;
   margin-top: var(--space-md);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
-/* Service Items Stack */
-.service-items-stack {
+/* Editorial Service Rows (Fine hairlines, generous breathing room) */
+.services-list-container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  width: 100%;
+  border-top: 1px solid var(--color-border);
 }
 
 .service-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1.35rem 1.6rem;
-  background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  padding: 1.6rem 1.4rem;
+  border-bottom: 1px solid var(--color-border);
   cursor: pointer;
   transition: all var(--transition);
-  position: relative;
+  background-color: transparent;
+  outline: none;
 }
 
 .service-card:hover {
-  border-color: var(--color-bronze);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(158, 106, 75, 0.08);
+  background-color: #F5F1EA;
+  padding-left: 1.8rem;
 }
 
 .service-card.selected {
-  border-color: var(--color-primary);
-  background-color: #FFFFFF;
-  box-shadow: 0 8px 26px rgba(21, 39, 36, 0.08);
-  border-left: 5px solid var(--color-bronze);
+  background-color: var(--color-bg-surface);
+  box-shadow: inset 3px 0 0 var(--color-bronze);
+  padding-left: 1.8rem;
+}
+
+.service-card-left {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  min-width: 0;
 }
 
 .service-index {
   font-family: var(--font-brand);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.35rem;
   color: var(--color-bronze);
-  letter-spacing: 0.05em;
-  width: 28px;
+  font-weight: var(--fw-semibold);
+  width: 26px;
   flex-shrink: 0;
-  line-height: 1;
 }
 
 .service-title {
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: var(--fw-bold);
+  font-size: 1.45rem;
   color: var(--color-primary);
-  white-space: nowrap;
+  font-weight: var(--fw-normal);
+  transition: color var(--transition);
 }
 
-/* Editorial Dotted Menu Leader */
-.service-leader {
-  flex: 1;
-  margin: 0 var(--space-md);
-  height: 1px;
-  border-bottom: 1.5px dotted rgba(21, 39, 36, 0.2);
-  min-width: 24px;
-  transition: border-color var(--transition);
-}
-
-.service-card:hover .service-leader {
-  border-bottom-color: var(--color-bronze);
-}
-
-.service-card.selected .service-leader {
-  border-bottom-color: var(--color-bronze);
-  opacity: 0.8;
+.service-card:hover .service-title,
+.service-card.selected .service-title {
+  color: var(--color-bronze-dark);
 }
 
 .service-card-right {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   flex-shrink: 0;
 }
 
 .service-cost {
   font-family: var(--font-brand);
-  font-size: 1.9rem;
-  font-weight: 600;
+  font-size: 2.1rem;
+  font-weight: var(--fw-semibold);
   color: var(--color-primary);
   letter-spacing: 0.02em;
 }
 
-.service-select-indicator {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition);
+.service-arrow {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  transition: transform var(--transition), color var(--transition);
 }
 
-.service-card.selected .service-select-indicator {
-  border-color: var(--color-bronze);
-  background-color: var(--color-bronze);
+.service-card:hover .service-arrow {
+  color: var(--color-bronze);
+  transform: translateX(4px);
 }
 
-.service-select-indicator::after {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  opacity: 0;
-}
-
-.service-card.selected .service-select-indicator::after {
-  opacity: 1;
+.service-card.selected .service-arrow {
+  color: var(--color-bronze);
+  transform: translateX(4px);
 }
 
 /* --------------------------------------------------------------------------
-   4.5 BRAND CREST MINIMALIST DIVIDER
+   6. BRAND CREST MINIMALIST DIVIDER
    -------------------------------------------------------------------------- */
 .brand-crest-divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-md);
-  padding: var(--space-xl) 0;
+  gap: var(--space-lg);
+  padding: var(--space-2xl) 0;
   background-color: var(--color-bg-main);
 }
 
 .crest-line {
   flex: 1;
-  max-width: 140px;
+  max-width: 120px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-border), transparent);
 }
 
 .crest-emblem {
-  width: 32px;
-  height: 32px;
-  opacity: 0.35;
+  width: 28px;
+  height: 28px;
+  opacity: 0.4;
   object-fit: contain;
 }
 
 /* --------------------------------------------------------------------------
-   5. EL CONCEPTO ESPACIO COLINAS (CLEAN MODERN ROADMAP)
+   7. MANIFIESTO EN 3 ETAPAS (ARCHITECTURAL EXHIBITION GRID)
    -------------------------------------------------------------------------- */
 .concept-section {
   background-color: var(--color-bg-dark);
   position: relative;
   overflow: hidden;
+  padding: var(--space-3xl) 0;
 }
 
-.concept-section::before {
-  content: '';
+.concept-watermark {
   position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 480px;
-  height: 480px;
-  background-image: url('../assets/emblem_sun_light.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.09;
+  top: -100px;
+  right: -100px;
+  width: 520px;
+  height: 520px;
+  opacity: 0.045;
   pointer-events: none;
 }
 
 .concept-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background-color: var(--color-border-dark);
+  gap: 0;
   border: 1px solid var(--color-border-dark);
   margin-top: var(--space-2xl);
   position: relative;
   z-index: 1;
 }
 
-.concept-item {
-  background-color: var(--color-bg-dark);
+.concept-card {
   padding: var(--space-2xl) var(--space-xl);
+  border-right: 1px solid var(--color-border-dark);
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bg-dark);
   transition: background-color var(--transition);
 }
 
-.concept-item:hover {
-  background-color: var(--color-bg-dark-card);
+.concept-card:last-child {
+  border-right: none;
 }
 
-.concept-item-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-xl);
+.concept-card:hover {
+  background-color: var(--color-bg-dark-surface);
 }
 
 .concept-num {
-  font-family: var(--font-brand);
-  font-size: 2.6rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--color-gold);
   line-height: 1;
-  letter-spacing: 0.04em;
-  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
 }
 
-.concept-status-pill {
+.concept-status-line {
   font-family: var(--font-brand);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-sm);
-}
-
-.status-active {
-  background-color: rgba(42, 126, 79, 0.25);
-  color: #55E18A;
-}
-
-.status-next {
-  background-color: rgba(197, 157, 95, 0.2);
   color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.status-future {
-  background-color: rgba(255, 255, 255, 0.08);
+.concept-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+}
+
+.concept-card.muted .concept-status-dot {
+  background-color: var(--color-text-inverse-muted);
+  opacity: 0.5;
+}
+
+.concept-card.muted .concept-status-line {
   color: var(--color-text-inverse-muted);
 }
 
-.concept-title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: #FFFFFF;
-  margin-bottom: var(--space-sm);
+.concept-card.muted .concept-num {
+  opacity: 0.4;
 }
 
-.concept-desc {
+.concept-card-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  color: #FFFFFF;
+  margin-bottom: var(--space-xs);
+}
+
+.concept-card-desc {
   font-size: 0.95rem;
   color: var(--color-text-inverse-muted);
   line-height: 1.6;
 }
 
-.concept-item-active {
-  position: relative;
-  box-shadow: inset 0 2px 0 var(--color-gold);
-}
-
-.concept-item-mystery {
-  background: linear-gradient(160deg, rgba(21, 39, 36, 0.98) 0%, rgba(14, 25, 23, 0.98) 100%);
-  position: relative;
-}
-
-.concept-item-mystery .concept-num {
-  opacity: 0.38;
-  color: var(--color-text-inverse-muted);
-}
-
-.concept-item-mystery .concept-desc {
-  letter-spacing: 0.04em;
-  font-style: italic;
-  opacity: 0.8;
-}
-
 /* --------------------------------------------------------------------------
-   6. EDITORIAL PHOTOGRAPHY SHOWCASE
+   8. EDITORIAL PHOTOGRAPHY SPREAD (ASYMMETRIC ART BOOK)
    -------------------------------------------------------------------------- */
 .gallery-section {
   padding: 0;
-  background-color: var(--color-bg-main);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border-dark);
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 480px;
+  grid-template-columns: 1.15fr 0.85fr;
+  height: 520px;
 }
 
 .gallery-item {
   position: relative;
   overflow: hidden;
   height: 100%;
+  border-right: 1px solid var(--color-border-dark);
+}
+
+.gallery-item:last-child {
+  border-right: none;
 }
 
 .gallery-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  filter: brightness(0.92) contrast(1.05);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter var(--transition);
 }
 
 .gallery-item:hover .gallery-img {
-  transform: scale(1.03);
+  transform: scale(1.04);
+  filter: brightness(0.98) contrast(1.05);
 }
 
-.gallery-label {
+.gallery-caption {
   position: absolute;
   bottom: var(--space-lg);
   left: var(--space-lg);
-  background-color: rgba(21, 39, 36, 0.88);
+  background: rgba(13, 24, 22, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(250, 248, 245, 0.12);
   color: #FFFFFF;
-  padding: 0.4rem 1rem;
-  font-size: 0.8rem;
+  font-family: var(--font-brand);
+  font-size: 0.85rem;
   font-weight: var(--fw-semibold);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  backdrop-filter: blur(8px);
 }
 
 /* --------------------------------------------------------------------------
-   7. LOCATION & WHATSAPP SECTION (DIRECT & UNCOMPLICATED)
+   9. CONTACT & CLOSING STATEMENT
    -------------------------------------------------------------------------- */
 .contact-section {
   background-color: var(--color-bg-subtle);
+  padding: var(--space-3xl) 0;
 }
 
-.contact-grid {
+.contact-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-3xl);
+  gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
 }
 
 .contact-info-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
   margin-top: var(--space-xl);
 }
 
-.contact-info-item {
-  border-left: 2px solid var(--color-bronze);
+.contact-info-row {
+  border-left: 1.5px solid var(--color-bronze);
   padding-left: var(--space-md);
 }
 
-.contact-item-title {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: var(--fw-bold);
-  color: var(--color-bronze);
-  margin-bottom: var(--space-2xs);
-}
-
-.contact-item-value {
-  font-size: 1.15rem;
-  color: var(--color-primary);
-  font-weight: var(--fw-medium);
-}
-
-.contact-card-box {
-  background-color: var(--color-primary);
-  color: var(--color-text-inverse);
-  padding: var(--space-2xl);
-  border-radius: var(--radius-md);
-  box-shadow: 0 16px 40px rgba(21, 39, 36, 0.18);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Subtle half-sun cropped watermark on contact card */
-.contact-card-box::after {
-  content: '';
-  position: absolute;
-  bottom: -60px;
-  right: -50px;
-  width: 220px;
-  height: 220px;
-  background-image: url('../assets/emblem_sun_light.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.08;
-  pointer-events: none;
-}
-
-.contact-card-box h3 {
-  color: #FFFFFF;
-  margin-bottom: var(--space-xs);
-  font-size: 1.6rem;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-card-box p {
+.contact-info-label {
   font-family: var(--font-brand);
-  font-size: 1.25rem;
-  letter-spacing: 0.03em;
-  color: var(--color-text-inverse-muted);
-  margin-bottom: var(--space-xl);
-  line-height: 1.35;
-  position: relative;
-  z-index: 1;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 2px;
 }
 
-.phone-big-link {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--color-gold);
-  letter-spacing: 0.04em;
-  margin-bottom: var(--space-xl);
-  transition: color var(--transition);
-  position: relative;
-  z-index: 1;
+.contact-info-value {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  line-height: 1.4;
 }
 
-.phone-big-link:hover {
-  color: #FFFFFF;
-}
-
-.contact-card-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  position: relative;
-  z-index: 1;
-}
-
-.contact-maps-link {
+.link-maps-editorial {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 6px;
+  gap: 5px;
   font-family: var(--font-brand);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-bronze);
+  margin-top: 4px;
   transition: color var(--transition);
 }
 
-.contact-maps-link:hover {
+.link-maps-editorial:hover {
   color: var(--color-primary);
   text-decoration: underline;
 }
 
-.icon-inline {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
+/* Contact Bespoke Concierge Box */
+.contact-atelier-card {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(200, 169, 126, 0.25);
+  box-shadow: 0 20px 48px rgba(13, 24, 22, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card-kicker {
+  font-family: var(--font-brand);
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+.contact-atelier-card h3 {
+  color: #FFFFFF;
+  font-size: 1.9rem;
+  margin-bottom: var(--space-xs);
+}
+
+.contact-atelier-card p {
+  color: var(--color-text-inverse-muted);
+  font-size: 0.98rem;
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+.phone-editorial-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--color-gold);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-xl);
+  transition: color var(--transition);
+}
+
+.phone-editorial-link:hover {
+  color: #FFFFFF;
+}
+
+.contact-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 /* --------------------------------------------------------------------------
-   8. FOOTER
+   10. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   background-color: var(--color-bg-dark);
   color: var(--color-text-inverse-muted);
   padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--color-border-dark);
   font-size: 0.88rem;
 }
 
@@ -1093,22 +1034,19 @@
 }
 
 .footer-logo {
-  height: 28px;
-  width: auto;
-}
-
-.footer-crest-emblem {
-  width: 26px;
   height: 26px;
-  opacity: 0.45;
-  object-fit: contain;
+  width: auto;
+  opacity: 0.85;
+}
+
+.footer-crest {
+  width: 24px;
+  height: 24px;
+  opacity: 0.35;
 }
 
 /* --------------------------------------------------------------------------
-   8. MOBILE STICKY BAR (FLOATING LUXURY PILL BAR)
-   -------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
-   8. MOBILE STICKY APPOINTMENT DOCK (LUXURY ARTISAN DOCK)
+   11. MOBILE FLOATING CONCIERGE DOCK (FROSTED GLASS PILL)
    -------------------------------------------------------------------------- */
 .mobile-sticky-bar {
   display: none;
@@ -1118,31 +1056,29 @@
   right: 14px;
   max-width: 440px;
   margin: 0 auto;
-  min-height: 64px;
-  background: linear-gradient(135deg, rgba(21, 39, 36, 0.96) 0%, rgba(14, 25, 23, 0.98) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(197, 157, 95, 0.4);
-  border-top: 1.5px solid rgba(197, 157, 95, 0.7);
-  border-radius: 999px;
-  padding: 0.55rem 0.65rem 0.55rem 1.15rem;
+  min-height: 60px;
+  background: rgba(13, 24, 22, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(200, 169, 126, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 0.6rem 0.5rem 1.15rem;
   z-index: 100;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
 .mobile-bar-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2px;
   min-width: 0;
   flex: 1;
 }
 
-.mobile-bar-tagline {
+.mobile-bar-kicker {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1152,78 +1088,49 @@
 .mobile-bar-brand {
   font-family: var(--font-brand);
   font-size: 0.72rem;
-  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-gold);
-}
-
-.mobile-bar-sep {
-  font-size: 0.55rem;
-  color: rgba(197, 157, 95, 0.7);
+  font-weight: var(--fw-semibold);
 }
 
 .mobile-bar-price {
   font-family: var(--font-brand);
   font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: var(--fw-bold);
   color: #FFFFFF;
 }
 
 .mobile-bar-service {
   font-family: var(--font-display);
-  font-size: 1.12rem;
+  font-size: 1.15rem;
   color: #FFFFFF;
-  letter-spacing: 0.01em;
   line-height: 1.15;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Artisan Tactile Button */
-.mobile-bar-cta {
+.mobile-bar-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  background: linear-gradient(135deg, #25D366 0%, #15803D 100%);
-  color: #FFFFFF;
-  padding: 0.68rem 1.1rem;
-  border-radius: 999px;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(200, 169, 126, 0.95) 0%, rgba(158, 106, 75, 0.95) 100%);
+  color: #0D1816;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-pill);
   font-family: var(--font-brand);
-  font-size: 1.02rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   transition: all var(--transition);
   flex-shrink: 0;
-  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
-.mobile-bar-cta:active {
+.mobile-bar-btn:active {
   transform: scale(0.96);
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
 }
-
-.mobile-bar-wa-icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  flex-shrink: 0;
-}
-
-.mobile-cta-arrow {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
-  transition: transform var(--transition);
-}
-
-.mobile-bar-cta:hover .mobile-cta-arrow {
-  transform: translate(2px, -2px);
-}
-
