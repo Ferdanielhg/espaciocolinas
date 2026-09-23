@@ -744,9 +744,18 @@
    -------------------------------------------------------------------------- */
 .concept-section {
   background-color: var(--color-bg-dark);
+  color: var(--color-text-inverse);
   position: relative;
   overflow: hidden;
   padding: var(--space-3xl) 0;
+}
+
+.concept-section .section-title {
+  color: #FFFFFF;
+}
+
+.concept-section .section-desc {
+  color: var(--color-text-inverse-muted);
 }
 
 .concept-watermark {
