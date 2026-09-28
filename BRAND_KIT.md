@@ -6,11 +6,11 @@
 
 ---
 
-## 1. Filosofía de Diseño: De "Plantilla de IA" a "Taller de Autor"
+## 1. Filosofía de Diseño: De "Plantilla de IA" a "Taller de Oficio"
 
 El rediseño final de **Espacio Colinas** se aleja conscientemente de los clichés comunes del diseño generado por IA (fondos saturados, sombras pesadas, botones de verde neón, etiquetas tipo SaaS y cajas genéricas). 
 
-Se basa en una **estética editorial arquitectónica**, inspirada en publicaciones de arte, diseño japonés/nórdico y barberías de autor tradicionales:
+Se basa en una **estética editorial arquitectónica**, inspirada en publicaciones de arte, diseño japonés/nórdico y barberías tradicionales de oficio:
 - **Lujo Silencioso:** Espacio negativo generoso, líneas ultrafinas (*hairlines* de 1px) y tipografía de serifa monumental.
 - **Materialidad Orgánica:** Contrastes entre el papel de lino cálido y la obsidiana profunda.
 - **Honestidad y Confianza:** Tono directo, sin jerga publicitaria inflada ni frases artificiales.
@@ -82,7 +82,7 @@ Ubicados en la carpeta `assets/` del proyecto y listos para subir a Canva:
 
 ###  Lo que SÍ se debe hacer (Estilo Awwwards):
 1. **Líneas divisorias de 1px:** Utiliza líneas ultrafinas con color sutil (`#101E1C` al 10% de transparencia) para separar bloques de contenido.
-2. **Fotografía con encuadre de autor:** Utiliza las fotos reales del taller (`assets/barberiareal.jpeg`, `assets/herobarber.jpeg`) y acompáñalas con una etiqueta tipográfica pequeña: `Fig. 01 — Estación Clásica`.
+2. **Fotografía con encuadre editorial:** Utiliza las fotos reales del taller (`assets/barberiareal.jpeg`, `assets/herobarber.jpeg`) y acompáñalas con una etiqueta tipográfica pequeña: `Fig. 01 — Estación Clásica`.
 3. **Espaciado generoso:** Deja márgenes amplios alrededor de los textos; el espacio vacío comunica lujo y confianza.
 
 ---

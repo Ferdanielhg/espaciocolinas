@@ -557,7 +557,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   5. MENÚ DE AUTOR (EDITORIAL ATELIER PRICE LIST)
+   5. MENÚ DE SERVICIOS (EDITORIAL PRICE LIST)
    -------------------------------------------------------------------------- */
 .services-section {
   background-color: var(--color-bg-main);
@@ -655,7 +655,7 @@
 
 .service-card-left {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: var(--space-md);
   min-width: 0;
 }
@@ -667,6 +667,15 @@
   font-weight: var(--fw-semibold);
   width: 26px;
   flex-shrink: 0;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.service-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
 }
 
 .service-title {
@@ -674,7 +683,15 @@
   font-size: 1.45rem;
   color: var(--color-primary);
   font-weight: var(--fw-normal);
+  line-height: 1.2;
   transition: color var(--transition);
+}
+
+.service-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
 }
 
 .service-card:hover .service-title,
